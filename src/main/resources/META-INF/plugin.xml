@@ -29,6 +29,11 @@
             <className>com.example.task.CallPathIntention</className>
             <language>JAVA</language>
         </intentionAction>
-
+        <projectService serviceImplementation="com.example.task.CallPathService"/>
+        <toolWindow
+                id="Call Path Analysis"
+                secondary="true"
+                anchor="bottom"
+                factoryClass="com.example.task.CallPathWindowFactory"/>
     </extensions>
 </idea-plugin>

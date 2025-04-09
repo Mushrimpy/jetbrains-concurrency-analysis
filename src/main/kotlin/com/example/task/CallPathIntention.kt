@@ -25,7 +25,7 @@ class CallPathIntention : PsiElementBaseIntentionAction() {
         val targetMethodName = Messages.showInputDialog(
             project,
             "Enter target method name",
-            "Find Method Call Paths",
+            "Find method call paths",
             null
         ) ?: return
         if (targetMethodName.isEmpty())
@@ -35,7 +35,11 @@ class CallPathIntention : PsiElementBaseIntentionAction() {
         val paths = tracer.findCallPaths(sourceMethod, targetMethodName)
         val resultText = tracer.formatCallPaths(paths)
 
-        // Need to call Service class
+        CallPathService.getInstance(project).showResultsInConsole(
+            resultText,
+            sourceMethod.name,
+            targetMethodName
+        )
     }
 
     override fun startInWriteAction(): Boolean = false
