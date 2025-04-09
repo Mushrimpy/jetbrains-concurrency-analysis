@@ -1,4 +1,4 @@
-package com.example.jetbrainsconcurrencyanalysis
+package com.example.task
 
 import com.intellij.psi.JavaRecursiveElementVisitor
 import com.intellij.psi.PsiMethod
@@ -47,7 +47,7 @@ class CallPathTracer {
             return "No call paths found to the target method."
         }
         return buildString {
-            append("Found ${paths.size} call path(s):\n\n")
+            append("Found ${paths.size} call path(s):\n")
             paths.forEachIndexed { index, path ->
                 append("Path ${index + 1}: ${path.joinToString(" -> ")}\n")
             }

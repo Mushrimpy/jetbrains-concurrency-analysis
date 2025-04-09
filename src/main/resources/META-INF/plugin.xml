@@ -25,6 +25,10 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
+        <intentionAction>
+            <className>com.example.task.CallPathIntention</className>
+            <language>JAVA</language>
+        </intentionAction>
 
     </extensions>
 </idea-plugin>
