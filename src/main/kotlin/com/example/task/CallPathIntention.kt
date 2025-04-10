@@ -25,7 +25,7 @@ class CallPathIntention : PsiElementBaseIntentionAction() {
         val targetMethodName = Messages.showInputDialog(
             project,
             "Enter target method name",
-            "Find method call paths",
+            "Find Method Call Paths",
             null
         ) ?: return
         if (targetMethodName.isEmpty())

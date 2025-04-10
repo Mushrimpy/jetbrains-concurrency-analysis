@@ -28,6 +28,7 @@
         <intentionAction>
             <className>com.example.task.CallPathIntention</className>
             <language>JAVA</language>
+            <descriptionDirectoryName>intentionDescriptions/CallPathIntention</descriptionDirectoryName>
         </intentionAction>
         <projectService serviceImplementation="com.example.task.CallPathService"/>
         <toolWindow
