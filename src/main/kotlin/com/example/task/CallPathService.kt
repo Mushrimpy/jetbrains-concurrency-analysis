@@ -1,5 +1,6 @@
 package com.example.task
 
+import com.intellij.openapi.components.Service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindowManager
 import com.intellij.ui.content.ContentFactory
@@ -8,6 +9,7 @@ import javax.swing.JPanel
 import javax.swing.JScrollPane
 import javax.swing.JTextArea
 
+@Service(Service.Level.PROJECT)
 class CallPathService(private val project: Project) {
 
     companion object {
