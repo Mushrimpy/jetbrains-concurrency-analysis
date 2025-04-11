@@ -2,7 +2,7 @@
 
 ## Overview
 
-Implement an IntelliJ IDEA plugin with an intention for Java methods that prompts a user to input a method name, finds usages of this method name in all execution paths of the original method, and then prints the usages with the execution paths.
+An IntelliJ IDEA plugin with an intention for Java methods that prompts the user to input a method name, finds usages of this method name in all execution paths of the original method, and then prints the usages with the execution paths.
 For example:
 ``` java
 void foo() {
@@ -15,7 +15,7 @@ void baz() {
     interestingMethod();
 }
 ```
-The user should be able to invoke an intention in method foo, input interestingMethod, and then they should get foo -> bar -> baz written in a console.
+The user should be able to invoke an intention in method foo, input interestingMethod, and then get foo -> bar -> baz written in a console.
 
 ## Implementation
 
