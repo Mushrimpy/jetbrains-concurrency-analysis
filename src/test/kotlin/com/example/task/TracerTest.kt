@@ -42,6 +42,13 @@ class TracerTest : BasePlatformTestCase() {
         assertTrue(expectedPaths.contains(paths[1]))
     }
 
+    fun testRecursiveCall() {
+        val paths = findPathsFromFile("RecursiveCall.java", "A", "C")
+        // Despite recursion in B, we still expect the path A -> B -> C
+        assertEquals(1, paths.size)
+        assertEquals(listOf("A", "B", "C"), paths[0])
+    }
+
     private fun findPathsFromFile(
         fileName: String,
         sourceMethodName: String,
