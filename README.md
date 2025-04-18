@@ -15,7 +15,10 @@ void baz() {
     interestingMethod();
 }
 ```
-The user should be able to invoke an intention in method foo, input interestingMethod, and then get foo -> bar -> baz written in a console.
+The user should be able to invoke an intention in method foo, input interestingMethod, and then get foo -> bar -> baz -> interestingMethod written in a console.
+
+## Demo
+![Call paths UI](assets/demo.png)
 
 ## Implementation
 
@@ -36,5 +39,8 @@ Add the current method to the path -> Check if the target is reached
 - ```PsiMethodCallExpression```: Represents a method invocation within code
 - ```JavaRecursiveElementVisitor```: A visitor pattern implementation that traverses the PSI tree
 
+## Acknowledgements
+Thanks to Konstantin Nisht for proposing this mini-project.
 
-
+## License
+MIT
